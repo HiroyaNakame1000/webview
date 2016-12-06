@@ -1,0 +1,11 @@
+
+CFBundleDisplayName = "ﾏｲｸﾛﾀﾞｲｴｯﾄ";
+"INFOMATION_TITLE_" = "インフォメーション";
+"SAFARI_ALERT_TITLE" = "Safari";
+"SAFARI_ALERT_MESSAGE" = "ブラウザを起動しますか";
+"BTN_CANCEL" = "キャンセル";
+"BTN_OK" = "OK";
+"ALERT_TITLE_IMAGE_FILE_SAVE" = "ダウンロード中...";
+"ALERT_TITLE_FILE_UNZIP" = "解凍中...";
+"ALERT_MESSAGE_IMAGE_FILE_SAVE" = "しばらくお待ちください";
+"ALERT_TITLE_UPDATE_NOT" = "更新";
