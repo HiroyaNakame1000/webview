@@ -15,8 +15,8 @@ class ViewController: UIViewController , UIWebViewDelegate{
     var urlString:String = "https://google.com/"
     
     func loadURL() {
-        let url = NSURL(string: urlString)
-        let urlRequest = NSURLRequest(URL: url!)
+        let url = URL(string: urlString)
+        let urlRequest = URLRequest(url: url!)
         mainWebView.loadRequest(urlRequest)
     }
     
@@ -35,23 +35,23 @@ class ViewController: UIViewController , UIWebViewDelegate{
 
 
     //---------UIWebViewDelegateメソッド　始まり---------------------------
-    func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-        if (request.URL?.scheme == "pageloaded") {
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        if (request.url?.scheme == "pageloaded") {
             return false
         }
         return true
     }
-    func webViewDidStartLoad(webView: UIWebView){
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+    func webViewDidStartLoad(_ webView: UIWebView){
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
     }
-    func webViewDidFinishLoad(webView: UIWebView) {
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
         
     }
     
-    func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
-         UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+    func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
+         UIApplication.shared.isNetworkActivityIndicatorVisible = false
         
     }
      //---------UIWebViewDelegateメソッド 終わり---------------------------
